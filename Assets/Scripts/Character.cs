@@ -9,7 +9,7 @@ public abstract class Character : MonoBehaviour
 
     public bool IsAlive { get; private set; } = true;
 
-    public void GetDamage(int damage)
+    public void GetDamage(float damage)
     {
         Health.Decrease(damage);
 

@@ -5,20 +5,20 @@ public class HealthModel : MonoBehaviour
 {
     public event Action Changed;
     
-    public int MinValue => 0;
-    public int MaxValue => 100;
+    public float MinValue => 0f;
+    public float MaxValue => 100f;
 
-    public int Value { get; private set; } = 100;
+    public float Value { get; private set; } = 100f;
     
-    public float RelativeValue => (float)Value / MaxValue;
+    public float RelativeValue => Value / MaxValue;
 
-    public void Increase(int value)
+    public void Increase(float value)
     {
         Value += value;
         ChangeValue();
     }
 
-    public void Decrease(int value)
+    public void Decrease(float value)
     {
         Value -= value;
         ChangeValue();

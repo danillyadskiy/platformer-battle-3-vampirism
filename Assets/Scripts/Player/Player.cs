@@ -7,4 +7,9 @@ public class Player : Character
     {
         Health.Increase(Health.MaxValue);
     }
+
+    public void RestoreHealth(float health)
+    {
+        Health.Increase(health);
+    }
 }
