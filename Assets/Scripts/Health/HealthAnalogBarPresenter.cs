@@ -21,7 +21,7 @@ public class HealthAnalogBarPresenter : HealthBarPresenter
         while (current != target)
         {
             current = HealthView.value = Mathf.MoveTowards(current, target, Time.deltaTime);
-            yield return new WaitForSeconds(Time.deltaTime);
+            yield return null;
         }
     }
 }

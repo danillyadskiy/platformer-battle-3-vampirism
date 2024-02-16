@@ -4,12 +4,12 @@ using UnityEngine;
 
 public class EnemyAttackTrigger : MonoBehaviour
 {
-    public event Action Entered;
-
     private readonly float _coroutineWaitingTime = 1f;
     
     private Coroutine _coroutine;
     private bool _isCoroutineWorking;
+    
+    public event Action Entered;
     
     public void OnTriggerEnter2D(Collider2D other)
     {

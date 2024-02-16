@@ -4,13 +4,13 @@ using UnityEngine;
 
 public class EnemyAttack : MonoBehaviour
 {
-    public event Action Hit;
-
     private readonly RaycastHelper _raycastHelper = new RaycastHelper();
     private readonly int _damage = 20;
     
     [SerializeField] private Collider2D _collider;
     [SerializeField] private EnemyAttackTrigger _trigger;
+    
+    public event Action Hit;
 
     private void OnEnable()
     {

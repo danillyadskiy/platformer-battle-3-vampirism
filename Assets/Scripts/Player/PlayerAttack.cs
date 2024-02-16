@@ -4,12 +4,12 @@ using UnityEngine;
 
 public class PlayerAttack : MonoBehaviour
 {
-    public event Action Hit;
-    
     private readonly RaycastHelper _raycastHelper = new RaycastHelper();
     private readonly int _damage = 20;
     
     [SerializeField] private Collider2D _collider;
+    
+    public event Action Hit;
 
     private void Update()
     {

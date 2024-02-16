@@ -19,10 +19,10 @@ public class PlayerDeathComponentDisabler : MonoBehaviour
 
     private void DisableComponents()
     {
-        StartCoroutine(Coroutine());
+        StartCoroutine(DisableComponentsOnDeath());
     }
 
-    private IEnumerator Coroutine()
+    private IEnumerator DisableComponentsOnDeath()
     {
         if (gameObject.TryGetComponent(out PlayerMovement playerMovement))
             playerMovement.enabled = false;

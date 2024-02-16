@@ -5,7 +5,7 @@ using UnityEngine;
 public class VampirismSpell : MonoBehaviour
 {
     private readonly float _healthPerSecond = 20f;
-    private readonly int _workingTimeInSeconds = 6;
+    private readonly WaitForSeconds _workingTimeInSeconds = new WaitForSeconds(6);
     
     [SerializeField] private Player _player;
     
@@ -39,7 +39,7 @@ public class VampirismSpell : MonoBehaviour
     {
         _isActive = true;
 
-        yield return new WaitForSeconds(_workingTimeInSeconds);
+        yield return _workingTimeInSeconds;
 
         _isActive = false;
     }

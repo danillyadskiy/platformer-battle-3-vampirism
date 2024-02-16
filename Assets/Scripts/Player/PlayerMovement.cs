@@ -3,8 +3,6 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
-    public event Action Jumped;
-    
     private readonly float _jumpForce = 1000.0f;
     private readonly float _gravityScale = 5.0f;
     private readonly float _movementSpeed = 6.0f;
@@ -12,6 +10,8 @@ public class PlayerMovement : MonoBehaviour
     [field: SerializeField] public Rigidbody2D Rigidbody { get; private set; }
     
     public float Direction { get; private set; }
+    
+    public event Action Jumped;
 
     private void Start()
     {
